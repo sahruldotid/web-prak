@@ -1,0 +1,84 @@
+@font-face {
+    font-family: Bebas;
+    src: url(../font/Bebas.ttf);
+  }
+
+html body{
+    background: #F2F2F2;
+}
+
+.mid{
+  min-height: 80vh;
+}
+
+.auth-form{
+    margin: auto 0;
+    padding: 5%;
+    background: #F9F9F9;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 25px; 
+}
+
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+  }
+
+
+
+
+.auth-label{
+    font-family: Bebas;
+    line-height: 38px;
+    color: #FE7624;
+    font-size: 60px;
+    transition: opacity 500ms;
+
+
+
+}
+.signup-div{
+    margin: 10px;
+}
+
+
+.login-nav a{
+    font-family: Bebas;
+    font-size: 32px;
+    line-height: 38px;
+    letter-spacing: 0.06em;
+    color: #2E186A;
+}
+
+
+.button{
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+	border-radius: 2px;
+    padding: 13px 28px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.14);
+    text-transform: uppercase;
+    box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 100px !important;
+}
+
+.button-yellow{
+    background: #e5ae09;
+    background: -moz-linear-gradient(-45deg, #FE7624 0%, #FE7624 50%, #FE7624 51%, #FE7624 71%, #FE7624 100%);
+    background: -webkit-linear-gradient(-45deg, #FE7624 0%,#FE7624 50%,#FE7624 51%,#fc9014 71%,#FE7624 100%);
+    background: linear-gradient(135deg, #FE7624 0%,#FE7624 50%,#FE7624 51%,#FE7624 71%,#FE7624 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5ae09', endColorstr='#FE7624',GradientType=1 );
+    background-size: 400% 400%;
+    -webkit-animation: AnimationName 3s ease infinite;
+    -moz-animation: AnimationName 3s ease infinite;
+    animation: AnimationName 3s ease infinite;
+    -webkit-animation: AnimationName 3s ease infinite;
+    -moz-animation: AnimationName 3s ease infinite;
+    animation: AnimationName 3s ease infinite;
+    border: medium none;
+    color: #fff !important;
+}
+

@@ -1,0 +1,5 @@
+@section('title','Edit Account')
+@include('layouts.header')
+@include('layouts.admin.sidebar')
+@yield('main')
+@include('layouts.footer')
