@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>@yield('title')</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://kuliah.exploitcode.net/web-prak/css/style.css">
     <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/dashboard/">
     <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/4.0/examples/dashboard/dashboard.css" rel="stylesheet">

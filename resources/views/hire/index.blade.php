@@ -67,7 +67,7 @@
                          <button type="submit" class="button button-yellow" data-toggle="modal" data-target=".bd-example-modal-xl">Hire</button>
                     @endauth
                     @guest
-                        <a href="/login"><button type="submit" class="button button-yellow">Login</button></a>
+                        <a href="{{route('login')}}"><button type="submit" class="button button-yellow">Login</button></a>
                     @endguest
 
 
@@ -132,7 +132,7 @@
                 </div>
 
                 <div class="payment-form" id="payment-form">
-                    <form action="/purchase" id="payment" role="form" method="POST">
+                    <form action="{{route('user_purchase')}}" id="payment" role="form" method="POST">
                     @csrf
                     <div class="form-group">
                         <label for="fullname">Select Date</label>
