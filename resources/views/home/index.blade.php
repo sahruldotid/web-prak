@@ -13,20 +13,28 @@
       <div class="album py-5 bg-light">
         <div class="container">
           <div class="row">
+            
+            @foreach($consultants as $consultant)
+
             <div class="col-md-4">
               <div class="card mb-4 box-shadow">
-                <img class="card-img-top" src="{{ asset('images/ikura.jpg') }}" style="width: 100%; height: 100%;">
+                <img class="card-img-top" src="{{$consultant->profile_pic}}" style="width: 100%; height: 100%;">
                 <div class="card-body">
-                <h5 class="card-title">Lila Ikura</h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <h5 class="card-title">{{$consultant->name}}</h5>
+                  <p class="card-text">{{$consultant->bio}}</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <a role="button" class="btn btn-sm btn-outline-secondary" href="/profile">View</a>   
+                      <a role="button" class="btn btn-sm btn-outline-secondary" href="hire/{{$consultant->id}}">View</a>   
                     </div> 
                   </div>
                 </div>
               </div>
             </div>
+
+            @endforeach
+            
+            
+            
           </div>
         </div>
       </div>

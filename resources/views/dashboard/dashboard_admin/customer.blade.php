@@ -15,23 +15,18 @@
                   <th>ID</th>
                   <th>Name</th>
                   <th>Registered At</th>
-                  <th>Action</th>
+                  <!-- <th>Action</th> -->
                 </tr>
               </thead>
               <tbody>
+              @foreach($customers as $customer)
                 <tr>
-                  <td>1</td>
-                  <td>User 1</td>
-                  <td>1/1/2021</td>
-                  <td><a href="">Edit</a></td>
-
+                  <td>{{$customer->id}}</td>
+                  <td>{{$customer->name}}</td>
+                  <td>{{$customer->created_at}}</td>
+                  <!-- <td><a href="">Edit</a></td> -->
                 </tr>
-                <tr>
-                  <td>2</td>
-                  <td>User2</td>
-                  <td>1/1/2021</td>
-                  <td><a href="">Edit</a></td>
-                </tr>
+              @endforeach
               </tbody>
             </table>
           </div>

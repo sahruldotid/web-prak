@@ -17,7 +17,7 @@
                         <a class="nav-link px-3" href="/dashboard">My Account</a>
                         @endauth
                         @guest
-                        <a class="nav-link px-3" href="/register">Register</a>
+                        <a class="nav-link px-3" href="/login">Login</a>
                         @endguest
                     </li>
                 </ul>

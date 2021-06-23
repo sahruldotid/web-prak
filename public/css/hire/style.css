@@ -13,7 +13,10 @@ html body{
 }
 
 
-
+.first-row{
+    margin-top: 45px;
+    /* border: 1px solid; */
+}
 
 img {
     max-width: 100%;

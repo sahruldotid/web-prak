@@ -23,8 +23,8 @@
 
                 <div class="panel text-center">
 
-                @if($user->profile->profile_pic)
-                <img id="profile" src="{{ $user->profile->profile_pic }}">
+                @if($user ->profile_pic)
+                <img id="profile" src="{{ $user ->profile_pic }}">
                 @else
                 <img id="profile" src="https://res.cloudinary.com/pwnt3ster/image/upload/v1620997772/default_qarwaq.png" >
                 @endif
@@ -49,11 +49,11 @@
                 <div class="col text-center">
                     <div id="input-type" class="row">
                         <div class="col-sm-2">
-                            <input class="form-check-input" type="radio" name="gender" value="M" id="inlineRadio1" class="sr-only"  {{ $user->profile->gender == 'M' ? 'checked' : ''}} required>
+                            <input class="form-check-input" type="radio" name="gender" value="M" id="inlineRadio1" class="sr-only"  {{ $user ->gender == 'M' ? 'checked' : ''}} required>
                             <label class="form-check-label" for="inlineRadio1">Laki - laki</label>
                         </div>
                         <div class="col-sm-2">
-                            <input class="form-check-input" type="radio" name="gender" value="F" class="sr-only" id="inlineRadio2" {{ $user->profile->gender == 'F' ? 'checked' : ''}} required>
+                            <input class="form-check-input" type="radio" name="gender" value="F" class="sr-only" id="inlineRadio2" {{ $user ->gender == 'F' ? 'checked' : ''}} required>
                             <label class="form-check-label" for="inlineRadio2">Perempuan</label>
                         </div>
                     </div>
@@ -63,7 +63,7 @@
 
             <div class="form-group">
                 <label for="fullname">Bio</label>
-                <textarea type="text" name="bio" id="bio" class="form-control">{{ $user->profile->bio }}</textarea>
+                <textarea type="text" name="bio" id="bio" class="form-control">{{ $user ->bio }}</textarea>
             </div>
             <div class="form-group text-right">
             <button type="submit" class="btn btn-info" style="margin-top: 30px">Update</button>

@@ -10,33 +10,28 @@ class ConsultantController extends Controller
 {
 
     public function index(){
-        
         return view("dashboard.dashboard_consultant.index");
     }
 
     public function edit(){
-        if(!Profile::where('user_id', Auth::id())->first()){
-            $profile = new Profile;
-            $profile->user_id = Auth::id();
-            $profile->save();
-        }
         $user = User::find(Auth::id());
         return view("dashboard.dashboard_consultant.account", ['user' => $user]);
     }
 
     public function images(Request $request){
+        dd($request);
         if($request->file('image')){
             $compressedImage = cloudinary()->upload($request->file('image')->getRealPath(), [
                 'folder' => 'uploads',
                 'transformation' => [
-                          'height' => 150,
-                          'width' => 150,
+                          'height' => 348,
+                          'width' => 348,
                 ]
             ])->getSecurePath();
 
             return $compressedImage;
         } else {
-            $img = Profile::where('user_id', Auth::id())->first();
+            $img = User::find(Auth::id());
             return $img->profile_pic;
         }
     }
@@ -44,16 +39,13 @@ class ConsultantController extends Controller
     public function update(Request $request){
         $compressedImage = self::images($request);
         $user = User::find(Auth::id());
-        $profile = $user->profile;
         $user->name = $request->name;
-        $profile->gender = $request->gender;
-        $profile->education = $request->education;
-        $profile->skill = $request->skill;
-        $profile->bio = $request->bio;
-        $profile->profile_pic = $compressedImage;
+        $user->gender = $request->gender;
+        $user->education = $request->education;
+        $user->skill = $request->skill;
+        $user->bio = $request->bio;
+        $user->profile_pic = $compressedImage;
         $user->save();
-        $profile->save();
-
         return redirect()->route('consultant_edit');
         
        

@@ -6,14 +6,7 @@
           <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
             <h1 class="h2">Transaction</h1>
             <div class="btn-toolbar mb-2 mb-md-0">
-              <div class="btn-group mr-2">
-                <button class="btn btn-sm btn-outline-secondary">Share</button>
-                <button class="btn btn-sm btn-outline-secondary">Export</button>
-              </div>
-              <button class="btn btn-sm btn-outline-secondary dropdown-toggle">
-                <span data-feather="calendar"></span>
-                This week
-              </button>
+               
             </div>
           </div>
 
@@ -24,20 +17,21 @@
                 <tr>
                   <th>Tanggal</th>
                   <th>Consultant</th>
-                  <th>Payment Method</th>
+             
                   <th>Status</th>
                   <th>Action</th>
                 </tr>
               </thead>
               <tbody>
+                @foreach($user as $transaction)
+
                 <tr>
-                  <td>1/2/2021</td>
-                  <td>Lila Ikura</td>
-                  <td>Visa</td>
+                  <td>{{ $transaction->created_at}}</td>
+                  <td>{{ $transaction->consultant->name}}</td>
                   <td>Verified</td>
-                  <td><a href="">Download Invoice</a></td>
-                  
+                  <td><a href="transaction/invoice/{{ $transaction->id}}" target="_blank">Download Invoice</a></td>
                 </tr>
+                @endforeach
               
               </tbody>
             </table>

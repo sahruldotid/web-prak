@@ -6,14 +6,7 @@
           <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
             <h1 class="h2">Dashboard</h1>
             <div class="btn-toolbar mb-2 mb-md-0">
-              <div class="btn-group mr-2">
-                <button class="btn btn-sm btn-outline-secondary">Share</button>
-                <button class="btn btn-sm btn-outline-secondary">Export</button>
-              </div>
-              <button class="btn btn-sm btn-outline-secondary dropdown-toggle">
-                <span data-feather="calendar"></span>
-                This week
-              </button>
+              
             </div>
           </div>
 
@@ -24,27 +17,22 @@
                 <tr>
                   <th>Tanggal</th>
                   <th>Consultant</th>
-                  <th>Title</th>
+         
                   <th>Status</th>
                   <th>Action</th>
                 </tr>
               </thead>
               <tbody>
+              @foreach ($past as $history)
+              @if(Carbon\Carbon::parse($history->consultation_end)->isPast())
                 <tr>
-                  <td>1/2/2021</td>
-                  <td>Lila Ikura</td>
-                  <td>Consultation Part 2</td>
-                  <td>Ongoing</td>
-                  <td><a href="">Download</a></td>
-                  
-                </tr>
-                <tr>
-                  <td>1/1/2021</td>
-                  <td>Lila Ikura</td>
-                  <td>Consultation Part 1</td>
+                  <td>{{$history->consultation_date}}</td>
+                  <td>{{$history->consultant->name}}</td>
                   <td>Finished</td>
-                  <td><a href="">Download</a></td>
+                  <td><a href="">Check History</a></td>
                 </tr>
+                @endif
+              @endforeach
               </tbody>
             </table>
           </div>
