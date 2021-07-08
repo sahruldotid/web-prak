@@ -8,7 +8,7 @@ use App\Models\User;
 use Auth;
 use Carbon\Carbon;
 use PDF;
-
+use App\Models\Message;
 
 class UserController extends Controller
 {

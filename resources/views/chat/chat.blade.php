@@ -7,7 +7,7 @@
 
 <script src="https://use.typekit.net/hoy3lrg.js"></script>
 <script>try{Typekit.load({ async: true });}catch(e){}</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.min.css'><link rel="stylesheet" href="./style.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.min.css'><link rel="stylesheet" href="{{ asset('css/chat/style.css') }}">
 <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous"> -->
 
 
@@ -39,11 +39,11 @@
 				</div>
 			</div>
 		</div>
-		<div id="search">
+		<!-- <div id="search">
 			<label for=""><i class="fa fa-search" aria-hidden="true"></i></label>
 			<input type="text" placeholder="Search contacts..." />
-		</div>
-		<div id="contacts">
+		</div> -->
+		<!-- <div id="contacts">
 			<ul>
 				<li class="contact active">
 					<div class="wrap">
@@ -68,7 +68,7 @@
 				
 				
 			</ul>
-		</div>
+		</div> -->
 		
 	</div>
 	<div class="content">
@@ -103,7 +103,7 @@
 	</div>
 </div>
 <!-- partial -->
-  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script><script  src="./script.js"></script>
+  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script><script  src="{{ asset('js/chat/script.js') }}"></script>
 
 
 </body>

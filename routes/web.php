@@ -6,7 +6,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\ConsultantController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\DashboardController;
-
+use App\Http\Controllers\ChatController;
 
 Route::get('/',[PublicController::class, 'index'])->name('home');
 Route::get('/hire/{id}',[PublicController::class, 'hire'])->name('hire');
@@ -14,6 +14,7 @@ Route::get('/hire/{id}',[PublicController::class, 'hire'])->name('hire');
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     
+
     
     Route::middleware(['user'])->group(function () {
         Route::get('/user/dashboard',[UserController::class, 'index'])->name("user_dashboard");
@@ -23,6 +24,7 @@ Route::middleware(['auth'])->group(function () {
         Route::post('/user/edit',[UserController::class, 'update'])->name("user_update");
         Route::post('/purchase',[UserController::class, 'purchase'])->name("user_purchase");
         Route::get('/user/transaction/invoice/{id}',[UserController::class, 'invoice'])->name("user_invoice");
+        Route::get('/user/chat/{id}',[ChatController::class, 'index'])->name("chat_room");
         
     });
 
@@ -45,10 +47,7 @@ Route::middleware(['auth'])->group(function () {
 
     
 
-    Route::middleware(['user', 'consultant'])->group(function () {
-        Route::get('/chat/{id}',[ChatController::class, 'index'])->name("chat_room");
-        
-    });
+    
 
 
 
