@@ -16,7 +16,7 @@
               <thead>
                 <tr>
                   <th>Tanggal</th>
-                  <th>Consultant</th>
+                  <th>User</th>
          
                   <th>Status</th>
                   <th>Action</th>
@@ -27,7 +27,7 @@
               @if(Carbon\Carbon::parse($history->consultation_end)->isPast())
                 <tr>
                   <td>{{$history->consultation_date}}</td>
-                  <td>{{$history->consultant->name}}</td>
+                  <td>{{$history->user->name}}</td>
                   <td>Finished</td>
                   <td><a href="">Check History</a></td>
                 </tr>
