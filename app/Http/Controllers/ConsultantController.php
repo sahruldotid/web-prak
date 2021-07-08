@@ -52,12 +52,11 @@ class ConsultantController extends Controller
     }
 
     public function chat(){
-       
-        return view("dashboard.dashboard_consultant.chat", ['session' => $session]);
+        return view("dashboard.dashboard_consultant.chat");
     }
 
     public function history(){
-        $session = Order::where('consultant_id', Auth::id())->get();
-        return view("dashboard.dashboard_consultant.transaction", ['session' => $session]);
+        $past = Order::where('consultant_id', Auth::id())->get();
+        return view("dashboard.dashboard_consultant.transaction", ['past' => $past]);
     }
 }
