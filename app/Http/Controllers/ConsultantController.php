@@ -51,7 +51,9 @@ class ConsultantController extends Controller
     }
 
     public function chat(){
-        return view("dashboard.dashboard_consultant.chat");
+        $session = Order::all();
+       
+        return view("dashboard.dashboard_consultant.chat", ['session' => $session]);
     }
 
     public function transaction(){
