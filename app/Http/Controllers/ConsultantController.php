@@ -10,7 +10,7 @@ class ConsultantController extends Controller
 {
 
     public function index(){
-        $session = Order::where('consultant_id', Auth::id())-get();
+        $session = Order::where('consultant_id', Auth::id())->get();
         return view("dashboard.dashboard_consultant.index", ['session' => $session]);
     }
 
