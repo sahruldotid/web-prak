@@ -10,7 +10,8 @@ class ConsultantController extends Controller
 {
 
     public function index(){
-        return view("dashboard.dashboard_consultant.index");
+        $session = Order::all();
+        return view("dashboard.dashboard_consultant.index", ['session' => $session]);
     }
 
     public function edit(){
@@ -51,7 +52,6 @@ class ConsultantController extends Controller
     }
 
     public function chat(){
-        $session = Order::all();
        
         return view("dashboard.dashboard_consultant.chat", ['session' => $session]);
     }
