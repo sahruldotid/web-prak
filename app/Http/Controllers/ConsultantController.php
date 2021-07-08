@@ -56,7 +56,8 @@ class ConsultantController extends Controller
         return view("dashboard.dashboard_consultant.chat", ['session' => $session]);
     }
 
-    public function transaction(){
-        return view("dashboard.dashboard_consultant.transaction");
+    public function history(){
+        $session = Order::where('consultant_id', Auth::id())->get();
+        return view("dashboard.dashboard_consultant.transaction", ['session' => $session]);
     }
 }

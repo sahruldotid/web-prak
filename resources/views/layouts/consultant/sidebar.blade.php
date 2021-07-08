@@ -13,6 +13,12 @@
                   Edit Account
                 </a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link {{(request()->segment(2) == 'history') ? 'active' : '' }}" href="{{route('consultant_history')}}">
+                  <span data-feather="book"></span>
+                  Edit Account
+                </a>
+              </li>
             </ul>        
           </div>
         </nav>

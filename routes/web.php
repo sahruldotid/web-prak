@@ -31,7 +31,7 @@ Route::middleware(['auth'])->group(function () {
     Route::middleware(['consultant'])->group(function () {
         Route::get('/consultant/dashboard',[ConsultantController::class, 'index'])->name('consultant_dashboard');
         Route::get('/consultant/chat',[ConsultantController::class, 'chat'])->name('consultant_chat');
-        Route::get('/consultant/transaction',[ConsultantController::class, 'transaction'])->name('consultant_transaction');
+        Route::get('/consultant/history',[ConsultantController::class, 'history'])->name('consultant_history');
         Route::get('/consultant/edit',[ConsultantController::class, 'edit'])->name('consultant_edit');
         Route::post('/consultant/edit',[ConsultantController::class, 'update'])->name("consultant_update");
     });
