@@ -15,7 +15,7 @@
               <thead>
                 <tr>
                   <th>Tanggal</th>
-                  <th>Consultant</th>
+                  <th>User</th>
                   <th>Status</th>
                   <th>Action</th>
                 </tr>
@@ -26,7 +26,7 @@
                 @if (Carbon\Carbon::now()->between(Carbon\Carbon::parse($chat->consultation_date), Carbon\Carbon::parse($chat->consultation_end)))
                 <tr>
                   <td>{{$chat->consultation_date}}</td>
-                  <td>{{$chat->consultant->name}}</td>       
+                  <td>{{$chat->user->name}}</td>       
                   <td>Running</td>
                   <td><a href="">Chat Now</a></td>
                 </tr>
@@ -44,7 +44,7 @@
               <thead>
                 <tr>
                   <th>Tanggal</th>
-                  <th>Consultant</th>
+                  <th>User</th>
                   <th>Status</th>
                   <th>Action</th>
                 </tr>
@@ -55,7 +55,7 @@
                 @if(!Carbon\Carbon::parse($chat->consultation_date)->isPast())
                 <tr>
                   <td>{{$chat->consultation_date}}</td>
-                  <td>{{$chat->consultant->name}}</td>
+                  <td>{{$chat->user->name}}</td>
                   <td>Ongoing</td>
                   <td><a href="">Wait for the date</a></td>
                 </tr>
