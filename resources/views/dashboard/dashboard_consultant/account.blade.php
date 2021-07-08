@@ -63,11 +63,11 @@
             
             <div class="form-group">
                 <label>Education</label>
-                <input type="text" name="education" class="form-control" maxlength="20" value="{{$user ->education}}">
+                <input type="text" name="education" class="form-control" value="{{$user ->education}}">
             </div>
             <div class="form-group">
                 <label>Skill</label>
-                <input type="text" name="skill" class="form-control" maxlength="20"  value="{{$user ->skill}}">
+                <input type="text" name="skill" class="form-control" value="{{$user ->skill}}">
             </div>
             <div class="form-group">
                 <label for="fullname">Bio</label>
