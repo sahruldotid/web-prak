@@ -19,7 +19,6 @@ class ConsultantController extends Controller
     }
 
     public function images(Request $request){
-        dd($request);
         if($request->file('image')){
             $compressedImage = cloudinary()->upload($request->file('image')->getRealPath(), [
                 'folder' => 'uploads',
