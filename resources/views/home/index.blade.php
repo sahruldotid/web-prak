@@ -5,7 +5,7 @@
       <section class="jumbotron text-center">
         <div class="container">
           <h1 class="jumbotron-heading">We Provide Your Marketing Support</h1>
-          <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.</p>
+          <p class="lead text-muted">Let our digital marketing team help you develop an online marketing strategy to drive more qualified visitors to your site and convert those visitors into leads and sales. What are you waiting for? Contact us today and start dominating the web.</p>
           <p>
           </p>
         </div>
